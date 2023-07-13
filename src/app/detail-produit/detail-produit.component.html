@@ -1,22 +1,16 @@
-<p>detail-produit works!</p>
-<div *ngIf="product">
-  <h2>Product Details</h2>
-  <div>
-    <label>Name:</label>
-    <span>{{ product.name }}</span>
+<div *ngIf="product" class="container mt-5">
+  <div class="card">
+    <div class="card-header">
+      <h2>Product Details</h2>
+    </div>
+    <div class="card-body">
+      <h4 class="card-title">{{ product.name }}</h4>
+      <p class="card-text">{{ product.description }}</p>
+      <p><strong>Price:</strong> ${{ product.price }}</p>
+      <img [src]="product.img" class="img-fluid" alt="Product image">
+    </div>
+    <div class="card-footer text-muted">
+      <button (click)="retour()" class="btn btn-primary">Back</button>
+    </div>
   </div>
-  <div>
-    <label>Price:</label>
-    <span>{{ product.price }}</span>
-  </div>
-  <div>
-    <label>Price:</label>
-    <span>{{ product.description }}</span>
-  </div>
-  <div>
-    <label>Image:</label>
-    <img [src]="product.img" alt="Product Image">
-  </div>
-
-  <button (click)=retour() class="btn btn-primary">Back</button>
 </div>
