@@ -1,0 +1,65 @@
+ <!-- <form #productForm="ngForm" (ngSubmit)="addProduct(productForm)"class="mt-4"> -->
+<!-- 
+ yet3ada mil attribut bil attribut -->
+  <!-- <div class="container mt-5">
+    <div class="card">
+      <div class="card-header">
+        <h2>Add Product</h2>
+      </div>
+      <div class="card-body">
+        <form (ngSubmit)="onSubmit()">
+          <div *ngIf="step === 1" class="form-group">
+            <label for="name"><strong>Name:</strong></label>
+            <input type="text" [(ngModel)]="product.name" name="name" id="name" class="form-control" placeholder="Enter product name">
+            <button class="btn btn-primary mt-3" type="button" (click)="nextStep()">Suivant</button>
+          </div>
+          <div *ngIf="step === 2" class="form-group">
+            <label for="price"><strong>Price:</strong></label>
+            <input type="text" [(ngModel)]="product.price" name="price" class="form-control" placeholder="Enter product price">
+            <button class="btn btn-primary mt-3" type="button" (click)="nextStep()">Suivant</button>
+          </div>
+          <div *ngIf="step === 3" class="form-group">
+            <label for="description"><strong>Description:</strong></label>
+            <textarea [(ngModel)]="product.description" name="description" id="description" class="form-control" placeholder="Enter product description"></textarea>
+            <button class="btn btn-primary mt-3" type="button" (click)="nextStep()">Suivant</button>
+          </div>
+          <div *ngIf="step === 4" class="form-group">
+            <label for="img"><strong>Image:</strong></label>
+            <input type="file" id="img" (change)="onFileSelected($event)" class="form-control-file">
+            <button type="submit" class="btn btn-success mt-3">Add Product</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div> -->
+
+  <div class="container mt-5">
+    <div class="card">
+      <div class="card-header">
+        <h2>Add Product</h2>
+      </div>
+      <div class="card-body">
+        <form (ngSubmit)="onSubmit()" class="mt-2">
+          <div class="form-group">
+            <label for="name"><strong>Name:</strong></label>
+            <input type="text" [(ngModel)]="product.name" name="name" id="name" class="form-control" placeholder="Enter product name">
+          </div>
+          <div class="form-group">
+            <label for="price"><strong>Price:</strong></label>
+            <input type="text" [(ngModel)]="product.price" name="price" class="form-control" placeholder="Enter product price">
+          </div>
+          <div class="form-group">
+            <label for="description"><strong>Description:</strong></label>
+            <textarea [(ngModel)]="product.description" name="description" id="description" class="form-control" placeholder="Enter product description"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="img"><strong>Image:</strong></label>
+            <input type="file" id="img" (change)="onFileSelected($event)" class="form-control-file">
+          </div>
+          <button type="submit" class="btn btn-primary mt-3">Add Product</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+

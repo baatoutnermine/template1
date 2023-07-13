@@ -1,0 +1,19 @@
+<app-location></app-location>
+<app-search></app-search>
+<div class="container-fluid">
+  <div class = "row">
+<div *ngFor="let p of produit "   class="col-md-3">
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" [src]=p.img alt="Card image cap">
+  <div  class="card-body">
+    <a [routerLink]="['/product', p.id]"><h5 class="card-title">{{p.name}}</h5></a>
+    <p class="card-text" [ngStyle]="{color:'green'}" *ngIf="p.price>200; else horstock ">{{p.price}}</p>
+    <p class="card-text">{{p.description}}</p>
+    <a [routerLink]="['product/edit/', p.id]" class="btn btn-primary">modifier</a>
+    <button (click)="deleteProduct(p.id)">Delete</button>
+    <ng-template #horstock ><p [ngStyle]="{color:'red'}"> {{p.price}} </p></ng-template>
+  </div>
+</div>
+</div>
+</div>
+</div>

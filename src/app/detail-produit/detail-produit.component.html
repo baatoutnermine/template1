@@ -1,0 +1,22 @@
+<p>detail-produit works!</p>
+<div *ngIf="product">
+  <h2>Product Details</h2>
+  <div>
+    <label>Name:</label>
+    <span>{{ product.name }}</span>
+  </div>
+  <div>
+    <label>Price:</label>
+    <span>{{ product.price }}</span>
+  </div>
+  <div>
+    <label>Price:</label>
+    <span>{{ product.description }}</span>
+  </div>
+  <div>
+    <label>Image:</label>
+    <img [src]="product.img" alt="Product Image">
+  </div>
+
+  <button (click)=retour() class="btn btn-primary">Back</button>
+</div>
